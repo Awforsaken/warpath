@@ -1,0 +1,125 @@
+{
+    "rows": [
+        {
+            "id": "row1",
+            "groups": [
+                {
+                    "name": "Unit Information",
+                    "fields": [
+                        {
+                            "label": "Name",
+                            "type": "text",
+                            "value": "Witch",
+                            "required": true,
+                            "placeholder": "Enter unit name"
+                        },
+                        {
+                            "label": "type",
+                            "type": "text",
+                            "value": "Flying"
+                        },
+                        {
+                            "label": "keywords",
+                            "type": "text",
+                            "value": "Blast"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "row2",
+            "groups": [
+                {
+                    "name": "",
+                    "fields": [
+                        {
+                            "label": "Movement",
+                            "type": "text",
+                            "value": "6/infantry"
+                        },
+
+                        {
+                            "label": "Ranged",
+                            "type": "text",
+                            "value": "0 Dice"
+                        },
+                        
+                        {
+                            "label": "Points Cost",
+                            "type": "number",
+                            "value": 100
+                        },
+                        {
+                            "label": "Armour",
+                            "type": "text",
+                            "value": "12"
+                        },
+                        {
+                            "label": "Ducats",
+                            "type": "number",
+                            "value": 100
+                        }
+                    ]
+                },
+                {
+                    "name": "Experience",
+                    "fields": [
+                        {
+                            "label": "Experience",
+                            "type": "text"
+                        },
+                        {
+                            "label": "",
+                            "type": "checkbox",
+                            "value": true
+                        },
+                        {
+                            "label": "",
+                            "type": "checkbox",
+                            "value": true
+                        },
+                        {
+                            "label": "",
+                            "type": "checkbox",
+                            "value": true
+                        },
+                        {
+                            "label": "",
+                            "type": "checkbox",
+                            "value": true
+                        },
+                        {
+                            "label": "",
+                            "type": "checkbox",
+                            "value": true
+                        }
+                        
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "row3",
+            "groups": [
+                {
+                    "name": "Unit Information",
+                    "fields": [
+                        {
+                            "label": "Special Rules Description",
+                            "type": "textarea",
+                            "value": "",
+                            "required": false,
+                            "placeholder": "Describe special rules"
+                        },
+                        {
+                            "label": "",
+                            "type": "checkbox",
+                            "value": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
