@@ -1,9 +1,42 @@
-body {
-    font-family: Arial, sans-serif;
+:root {
+  /* Base colors */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --background:#f5f5f5;
+  
+  /* Primary brand color (adjust to your app's brand) */
+  --color-primary: #2563eb;  /* blue-600 (tailwind) */
+  
+  /* Background colors */
+  --color-bg: var(--color-white);
+  --color-bg-secondary: #f9fafb;  /* gray-50 (tailwind) */
+  
+  /* Text colors - 3 levels of prominence */
+  --color-text-high: #111827;      /* gray-900 - High contrast (primary content) */
+  --color-text-medium: #4b5563;    /* gray-600 - Medium contrast (secondary text) */
+  --color-text-low: #7e8592;       /* gray-400 - Low contrast (disabled/tertiary) */
+
+  /* Border/divider colors */
+  --color-border: #e5e7eb;         /* gray-200 */
+  
+  /* Functional colors */
+  --color-success: #16a34a;        /* green-600 */
+  --color-warning: #d97706;        /* amber-600 */
+  --color-error: #dc2626;          /* red-600 */
+}
+
+body {  
+    background-color: var(  --background);
+    margin:0;
+    display:flex;
+    justify-content: center;
+}
+
+.main {
+    font-family: monospace;
     width:100%;
     max-width: 800px;
-    background-color: #f5f5f5;
-    padding:0;
+
 }
 
 .row {
@@ -12,13 +45,23 @@ body {
     flex-direction: row;
     border-bottom:1px solid #007bff ;
 }
+.row.vertical {
+    flex-direction: column;
+}
+
+.row.vertical .group{
+    flex-direction: column;
+}
 
 .group {
     padding: 1rem;
+    gap:2rem;
     flex-grow: 1;
+    flex-basis: 0;
     display:flex;
     flex-direction: row;
-    border-left:1px solid #007bff ;
+    border-left:1px solid var(--color-border);
+    outline:1px solid;
 }
 
 .group-title {
@@ -35,10 +78,15 @@ body {
     flex-grow:1;
 }
 
+.readonly .field label {
+    color: var(--color-text-low);
+    font-size: 0.8rem;
+}
+
 .field label {
     display: block;
     margin-bottom: 5px;
-    color: #555;
+    color: var(--color-text-medium);
     font-size:1rem;
 }
 
@@ -49,9 +97,8 @@ body {
     border-radius: 4px;
     font-size: 1.2rem;
     box-sizing: border-box;
-      width: 100%;
-  flex-shrink: 0;
-
+    height: auto;
+    field-sizing: content; /* Modern browsers - auto-sizing */
 }
 
 .field input[type="checkbox"] {
@@ -210,7 +257,7 @@ body {
 }
 
 /* Readonly/Disabled Field Styles */
-.field input.readonly {
+.field input.readonly, .field textarea.readonly {
     background-color: transparent;
     color: #000;
     border:none;    

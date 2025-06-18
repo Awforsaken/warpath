@@ -96,8 +96,7 @@ function createGroup(group) {
  */
 function createRow(row) {
     const rowDiv = document.createElement('div');
-    rowDiv.className = 'row';
-    rowDiv.id = row.id;
+    rowDiv.className = 'row ' + row.id;
 
     row.groups.forEach(group => {
         const groupElement = createGroup(group);
@@ -202,6 +201,7 @@ function toggleEditMode() {
             input.removeAttribute('readonly');
             input.removeAttribute('disabled');
             input.classList.remove('readonly');
+            container.classList.remove('readonly');
         } else {
             if (input.type === 'checkbox') {
                 input.disabled = true;
@@ -209,6 +209,7 @@ function toggleEditMode() {
                 input.readOnly = true;
             }
             input.classList.add('readonly');
+            container.classList.add('readonly');
         }
     });
     

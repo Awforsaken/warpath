@@ -1,23 +1,32 @@
 {
     "rows": [
         {
-            "id": "row1",
+            "id": "",
             "groups": [
                 {
-                    "name": "Unit Information",
+                    "name": "",
                     "fields": [
                         {
                             "label": "Name",
                             "type": "text",
                             "value": "Witch",
-                            "required": true,
                             "placeholder": "Enter unit name"
-                        },
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "fields": [
                         {
                             "label": "type",
                             "type": "text",
                             "value": "Flying"
-                        },
+                        }
+                    ]
+                },
+                {
+                    "name": "",
+                    "fields": [
                         {
                             "label": "keywords",
                             "type": "text",
@@ -28,7 +37,73 @@
             ]
         },
         {
-            "id": "row2",
+            "id": "",
+            "groups": [
+                {
+                    "name": "",
+                    "fields": [
+                        {
+                            "label": "Movement",
+                            "type": "text",
+                            "value": "6/infantry"
+                        },
+
+                        {
+                            "label": "Ranged",
+                            "type": "text",
+                            "value": "0 Dice"
+                        },
+                        
+                        {
+                            "label": "Points Cost",
+                            "type": "number",
+                            "value": 100
+                        },
+                        {
+                            "label": "Armour",
+                            "type": "text",
+                            "value": "12"
+                        },
+                        {
+                            "label": "Ducats",
+                            "type": "number",
+                            "value": 100
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "vertical",
+            "groups": [
+                {
+                    "name": "Unit Information",
+                    "fields": [
+                        {
+                            "label": "Special Rules Description",
+                            "type": "textarea",
+                            "value": "This wicked infernal weapon is treated as a one-handed Ranged weapon with the Keyword BLAST 3inch. Specify a 1x1mm point on the battlefield within 36inch that the Witch can see and that you want to target. Next, make a Ranged Attack ACTION. If the roll fails (i.e. you roll 6 or less with the two lowest Dice), the bomb lands 1inch away from its intended location, multiplied by the number representing the degree of failure (for example, if you rolled 5, the bomb lands 2inch away, as 7 - 5 = 2). The direction is decided by your opponent. Roll on the Injury Chart for each model within the BLAST radius.\n\nIf the bomb lands exactly on top of any model, roll with 3D6 on the Injury Chart and add the dice together! Other models hit by the bomb roll on the Injury Chart as standard. Any model hit, but not taken Out of Action, by this attack is blown D3inch directly away from the point of impact (roll for each model separately), stopping if they hit other models, buildings or objects. This attack has the Keyword SHRAPNEL and therefore causes an additional +1 BLOOD MARKER. Cover, range and higher position do not affect attacks by the Infernal Bomb. Roll injuries for models that would benefit from Cover from the perspective of the BLAST point with -1 DICE. The Activation of the Witch ends immediately after using the Infernal Bomb.",
+                            "required": false,
+                            "placeholder": "Describe special rules"
+                        },
+                        {
+                            "label": "",
+                            "type": "textarea",
+                            "value": "",
+                            "required": false,
+                            "placeholder": "Describe special rules"
+                        },
+                        {
+                            "label": "",
+                            "type": "checkbox",
+                            "value": true
+                        }
+                    ]
+                }
+            ]
+        },
+         {
+            "id": "",
             "groups": [
                 {
                     "name": "",
@@ -95,28 +170,6 @@
                             "value": true
                         }
                         
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "row3",
-            "groups": [
-                {
-                    "name": "Unit Information",
-                    "fields": [
-                        {
-                            "label": "Special Rules Description",
-                            "type": "textarea",
-                            "value": "",
-                            "required": false,
-                            "placeholder": "Describe special rules"
-                        },
-                        {
-                            "label": "",
-                            "type": "checkbox",
-                            "value": true
-                        }
                     ]
                 }
             ]

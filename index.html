@@ -7,30 +7,33 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Dynamic Character Sheet</h1>
-    <div class="controls">
-        <button class="load-json" onclick="loadCharacterSheet()">Load Character Sheet</button>
-        <button class="toggle-json" onclick="toggleJsonEditor()">Show JSON Editor</button>
-        <label class="toggle-container">
-            <input type="checkbox" id="edit-toggle" onchange="toggleEditMode()" checked>
-            <span class="toggle-label">Enable Editing</span>
-        </label>
-    </div>
-    
-    <div id="json-editor-container" class="json-editor-container" style="display: none;">
-        <div class="json-editor-header">
-            <h3>JSON Layout Editor</h3>
-            <div class="json-editor-controls">
-                <button onclick="applyJsonChanges()">Apply Changes</button>
-                <button onclick="resetJsonEditor()">Reset</button>
-                <button onclick="validateJson()">Validate JSON</button>
-            </div>
+    <div class="main">
+        <h1>Dynamic Character Sheet</h1>
+        <div class="controls">
+            <button class="load-json" onclick="loadCharacterSheet()">Load Character Sheet</button>
+            <button class="toggle-json" onclick="toggleJsonEditor()">Show JSON Editor</button>
+            <label class="toggle-container">
+                <input type="checkbox" id="edit-toggle" onchange="toggleEditMode()" checked>
+                <span class="toggle-label">Enable Editing</span>
+            </label>
         </div>
-        <textarea id="json-editor" class="json-editor" placeholder="JSON will be loaded here..."></textarea>
-        <div id="json-validation-message" class="validation-message"></div>
+        
+        <div id="json-editor-container" class="json-editor-container" style="display: none;">
+            <div class="json-editor-header">
+                <h3>JSON Layout Editor</h3>
+                <div class="json-editor-controls">
+                    <button onclick="applyJsonChanges()">Apply Changes</button>
+                    <button onclick="resetJsonEditor()">Reset</button>
+                    <button onclick="validateJson()">Validate JSON</button>
+                </div>
+            </div>
+            <textarea id="json-editor" class="json-editor" placeholder="JSON will be loaded here..."></textarea>
+            <div id="json-validation-message" class="validation-message"></div>
+        </div>
+        
+        <div id="character-sheet"></div>
     </div>
-    
-    <div id="character-sheet"></div>
+   
     
     <script src="character-sheet.js"></script>
 </body>
